@@ -1,6 +1,18 @@
 package io.github.mat3e;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "languages")
 class Lang {
+    @Id
+    @GeneratedValue(generator="inc")
+    @GenericGenerator(name="inc", strategy = "increment")
     private Integer id;
     private String welcomeMsg;
     private String code;
@@ -9,6 +21,10 @@ class Lang {
         this.id = id;
         this.welcomeMsg = welcomeMsg;
         this.code = code;
+    }
+
+    public Lang() {
+
     }
 
     public Integer getId() {

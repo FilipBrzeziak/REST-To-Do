@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Hello", urlPatterns = {"/api/*"})
+@WebServlet(name = "Hello", urlPatterns = {"/api"})
 public class HelloServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(HelloServlet.class);
     private final String NAME_PARAM = "name";

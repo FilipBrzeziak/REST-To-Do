@@ -21,6 +21,7 @@ public class HelloServiceTest {
         //then
         assertEquals(WELCOME + " "+HelloService.FALLBACK_NAME+"!",result);
     }
+
     @Test
     public void testPrepareGreetingNameReturnGreetingName(){
         var SUT = new HelloService();
@@ -33,6 +34,7 @@ public class HelloServiceTest {
         //then
         assertEquals(WELCOME + " "+name+"!",result);
     }
+
 
     @Test
     public void testPrepareGreetingNullLangReturnsGreetingWithFallbackIdLang(){
