@@ -1,4 +1,4 @@
-package io.github.mat3e;
+package TodoProject;
 
 import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.plus.webapp.EnvConfiguration;
@@ -7,8 +7,6 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.component.AbstractLifeCycle;
 import org.eclipse.jetty.util.component.LifeCycle;
 import org.eclipse.jetty.webapp.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class App {

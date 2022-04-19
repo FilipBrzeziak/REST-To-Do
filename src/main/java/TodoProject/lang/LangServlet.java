@@ -1,4 +1,4 @@
-package io.github.mat3e.lang;
+package TodoProject.lang;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -14,19 +14,19 @@ import java.io.IOException;
 public class LangServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(LangServlet.class);
 
-    private LangService service;
-    private ObjectMapper mapper;
+    private final LangService service;
+    private final ObjectMapper mapper;
 
 
     //Servlet container needs it
     @SuppressWarnings("unused")
-    public LangServlet(){
+    public LangServlet() {
         this(new LangService(), new ObjectMapper());
     }
 
-    LangServlet(LangService service, ObjectMapper mapper){
-        this.service =service;
-        this.mapper=mapper;
+    LangServlet(LangService service, ObjectMapper mapper) {
+        this.service = service;
+        this.mapper = mapper;
     }
 
     @Override

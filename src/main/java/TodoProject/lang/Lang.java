@@ -1,4 +1,4 @@
-package io.github.mat3e.lang;
+package TodoProject.lang;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -12,8 +12,8 @@ import javax.persistence.Table;
 public
 class Lang {
     @Id
-    @GeneratedValue(generator="inc")
-    @GenericGenerator(name="inc", strategy = "increment")
+    @GeneratedValue(generator = "inc")
+    @GenericGenerator(name = "inc", strategy = "increment")
     private Integer id;
     private String welcomeMsg;
     private String code;

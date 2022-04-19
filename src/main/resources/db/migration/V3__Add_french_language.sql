@@ -1,1 +1,1 @@
-insert into languages (welcomeMsg, code) values ('Bonjour','fr');
+insert into languages (welcomeMsg, code ) values ('Bonjour','fr');

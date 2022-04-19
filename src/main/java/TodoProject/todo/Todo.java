@@ -15,7 +15,7 @@ class Todo {
     @GenericGenerator(name = "inc", strategy = "increment")
     private Integer id;
     private String text;
-    private Boolean done;
+    private boolean done;
 
     public Todo(Integer id, String text, Boolean done) {
         this.id = id;

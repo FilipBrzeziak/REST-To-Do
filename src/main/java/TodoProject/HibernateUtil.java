@@ -1,4 +1,4 @@
-package io.github.mat3e;
+package TodoProject;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -14,7 +14,7 @@ public class HibernateUtil {
         }
     }
 
-    public static SessionFactory getSessionFactory(){
+    public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
 
@@ -31,7 +31,7 @@ public class HibernateUtil {
         }
     }
 
-    private HibernateUtil(){
+    private HibernateUtil() {
 
     }
 

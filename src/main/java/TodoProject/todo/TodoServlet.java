@@ -14,8 +14,8 @@ import java.io.IOException;
 public class TodoServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(TodoServlet.class);
 
-    private final TodoService service;
-    private final ObjectMapper mapper;
+    private TodoService service;
+    private ObjectMapper mapper;
 
 
     //Servlet container needs it
@@ -36,7 +36,7 @@ public class TodoServlet extends HttpServlet {
         mapper.writeValue(resp.getOutputStream(), service.findAll());
     }
 
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp){
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         var path = String.valueOf(req.getPathInfo());
         try {
             var toDoId = Integer.valueOf(path.substring(1));

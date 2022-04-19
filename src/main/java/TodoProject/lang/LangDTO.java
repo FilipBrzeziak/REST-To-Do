@@ -1,4 +1,4 @@
-package io.github.mat3e.lang;
+package TodoProject.lang;
 
 public class LangDTO {
     private Integer id;

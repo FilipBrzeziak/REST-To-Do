@@ -1,18 +1,19 @@
-package io.github.mat3e.lang;
+package TodoProject.lang;
 
 import java.util.List;
 
 class LangService {
-    private LangRepository repository;
+    private final LangRepository repository;
 
-    LangService(){
+    LangService() {
         this(new LangRepository());
     }
 
-    LangService(LangRepository repository){
+    LangService(LangRepository repository) {
         this.repository = repository;
     }
-    List<LangDTO> findAll(){
+
+    List<LangDTO> findAll() {
         return repository.findAll().stream().map(LangDTO::new).toList();
     }
 }

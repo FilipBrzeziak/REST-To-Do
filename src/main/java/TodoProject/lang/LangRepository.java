@@ -1,13 +1,13 @@
-package io.github.mat3e.lang;
+package TodoProject.lang;
 
 
-import io.github.mat3e.HibernateUtil;
+import TodoProject.HibernateUtil;
 
 import java.util.List;
 import java.util.Optional;
 
 public class LangRepository {
-    List<Lang> findAll(){
+    List<Lang> findAll() {
         var session = HibernateUtil.getSessionFactory().openSession();
         var transaction = session.beginTransaction();
 
@@ -18,10 +18,10 @@ public class LangRepository {
         return result;
     }
 
-    public Optional<Lang> findById(Integer id){
+    public Optional<Lang> findById(Integer id) {
         var session = HibernateUtil.getSessionFactory().openSession();
         var transaction = session.beginTransaction();
-        var result = session.get(Lang.class,id);
+        var result = session.get(Lang.class, id);
         transaction.commit();
         session.close();
         return Optional.ofNullable(result);
